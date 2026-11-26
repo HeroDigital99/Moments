@@ -1,0 +1,120 @@
+{
+  "routes": [
+    {
+      "path": "/about.html",
+      "title": "About"
+    },
+    {
+      "path": "/clients.html",
+      "title": "Clients"
+    },
+    {
+      "path": "/contact.html",
+      "title": "Contact"
+    },
+    {
+      "path": "/",
+      "title": "Index"
+    },
+    {
+      "path": "/product-double-sided.html",
+      "title": "Product Double Sided"
+    },
+    {
+      "path": "/product-elevator.html",
+      "title": "Product Elevator"
+    },
+    {
+      "path": "/product-full-height.html",
+      "title": "Product Full Height"
+    },
+    {
+      "path": "/product-horizontal.html",
+      "title": "Product Horizontal"
+    },
+    {
+      "path": "/product-interactive.html",
+      "title": "Product Interactive"
+    },
+    {
+      "path": "/product-outdoor.html",
+      "title": "Product Outdoor"
+    },
+    {
+      "path": "/product-photo-frame.html",
+      "title": "Product Photo Frame"
+    },
+    {
+      "path": "/product-portable.html",
+      "title": "Product Portable"
+    },
+    {
+      "path": "/product-self-checkout.html",
+      "title": "Product Self Checkout"
+    },
+    {
+      "path": "/product-smart.html",
+      "title": "Product Smart"
+    },
+    {
+      "path": "/product-tabletop-horizontal.html",
+      "title": "Product Tabletop Horizontal"
+    },
+    {
+      "path": "/product-tabletop.html",
+      "title": "Product Tabletop"
+    },
+    {
+      "path": "/product-vertical.html",
+      "title": "Product Vertical"
+    },
+    {
+      "path": "/product-video-wall.html",
+      "title": "Product Video Wall"
+    },
+    {
+      "path": "/product-wall.html",
+      "title": "Product Wall"
+    },
+    {
+      "path": "/products.html",
+      "title": "Products"
+    },
+    {
+      "path": "/sector-education.html",
+      "title": "Sector Education"
+    },
+    {
+      "path": "/sector-government.html",
+      "title": "Sector Government"
+    },
+    {
+      "path": "/sector-hotels.html",
+      "title": "Sector Hotels"
+    },
+    {
+      "path": "/sector-medical.html",
+      "title": "Sector Medical"
+    },
+    {
+      "path": "/sector-private.html",
+      "title": "Sector Private"
+    },
+    {
+      "path": "/sector-realestate.html",
+      "title": "Sector Realestate"
+    },
+    {
+      "path": "/sector-restaurants.html",
+      "title": "Sector Restaurants"
+    },
+    {
+      "path": "/services.html",
+      "title": "Services"
+    },
+    {
+      "path": "/showroom.html",
+      "title": "Showroom"
+    }
+  ]
+}

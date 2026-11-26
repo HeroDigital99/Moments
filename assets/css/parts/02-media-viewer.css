@@ -1,0 +1,39 @@
+/* Embedded media and premium on-site image preview */
+.factory-video-section{margin:30px 0 10px}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.video-frame{aspect-ratio:16/10;padding:8px;border-radius:24px;background:rgba(0,0,0,.38)}
+.video-frame video{display:block;width:100%;height:100%;object-fit:contain;border-radius:17px;background:#020812}
+.media-section{margin-top:44px}
+.gallery-groups{display:grid;gap:30px;margin-top:24px}
+.gallery-group{padding:24px;border:1px solid var(--edge);border-radius:26px;background:linear-gradient(150deg,rgba(255,255,255,.075),rgba(255,255,255,.018));box-shadow:0 14px 38px rgba(0,5,20,.2)}
+.gallery-heading{display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.gallery-heading h2{margin:0;font-size:clamp(21px,3vw,28px)}
+.gallery-heading p{margin:4px 0 0;font-size:13px;color:var(--mut)}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+.photo-tile{appearance:none;display:flex;flex-direction:column;width:100%;padding:0;overflow:hidden;border:1px solid rgba(255,255,255,.16);border-radius:18px;background:rgba(4,15,31,.72);color:var(--ink);font:inherit;text-align:center;cursor:zoom-in;transition:transform .25s,border-color .25s,box-shadow .25s}
+.photo-tile:hover{transform:translateY(-4px);border-color:rgba(46,230,197,.65);box-shadow:0 15px 32px rgba(0,0,0,.3),0 0 22px rgba(46,230,197,.14)}
+.photo-image{display:grid;place-items:center;width:100%;aspect-ratio:4/3;padding:8px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(0,0,0,.24));overflow:hidden}
+.photo-image img{display:block;width:100%;height:100%;object-fit:contain;border-radius:10px}
+.tile-caption{display:flex;align-items:center;justify-content:center;gap:9px;padding:10px 12px;font-size:13px;color:#dceaf7}
+.tile-caption small{color:var(--teal);font-size:11px;letter-spacing:.08em}
+.service-photo{width:min(100%,840px);margin:24px auto;padding:8px}
+.service-photo-button{width:100%}
+.service-photo .photo-image{aspect-ratio:16/7}
+.showroom-grid{margin-top:24px}
+.image-viewer{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;padding:64px 70px 76px;background:rgba(1,7,18,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.image-viewer.open{display:flex}
+.viewer-content{display:grid;justify-items:center;gap:12px;max-width:min(1200px,100%);max-height:100%;margin:0}
+.viewer-content img{display:block;max-width:min(90vw,1200px);max-height:78vh;object-fit:contain;border-radius:14px;box-shadow:0 24px 80px rgba(0,0,0,.58)}
+.viewer-content figcaption{color:#eaf6ff;font-size:15px}
+.viewer-close,.viewer-nav{position:absolute;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);border-radius:50%;color:#fff;background:rgba(255,255,255,.1);cursor:pointer;backdrop-filter:blur(12px);transition:.2s}
+.viewer-close:hover,.viewer-nav:hover{background:rgba(46,230,197,.25);border-color:var(--teal)}
+.viewer-close{top:22px;inset-inline-end:24px;width:48px;height:48px;font-size:32px;line-height:1}
+.viewer-nav{top:50%;width:52px;height:52px;font-size:34px;transform:translateY(-50%)}
+.viewer-prev{inset-inline-start:20px}.viewer-next{inset-inline-end:20px}
+.viewer-count{position:absolute;bottom:24px;color:#d9e7f4;font-size:13px}
+body.viewer-open{overflow:hidden}
+@media(max-width:720px){.video-grid{grid-template-columns:1fr;gap:12px}.video-frame{aspect-ratio:16/10;padding:6px}.gallery-group{padding:15px;border-radius:20px}.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo-tile{border-radius:14px}.photo-image{padding:5px}.tile-caption{font-size:11px;padding:8px 6px}.image-viewer{padding:60px 44px 70px}.viewer-content img{max-width:94vw;max-height:72vh}.viewer-close{top:14px;inset-inline-end:14px;width:42px;height:42px}.viewer-nav{width:40px;height:40px;font-size:28px}.viewer-prev{inset-inline-start:6px}.viewer-next{inset-inline-end:6px}}
+@media(max-width:370px){.photo-grid{grid-template-columns:1fr}}
+.service-photo-button img{display:block;width:100%;max-height:460px;object-fit:contain;background:rgba(0,0,0,.2)}
+.service-photo-button .tile-caption{padding-top:10px}
+

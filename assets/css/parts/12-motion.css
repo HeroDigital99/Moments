@@ -1,0 +1,27 @@
+/* Refined shared motion language: page entrance, viewport reveals, and a signature logo glow. */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: routeFadeOut .18s ease both; }
+::view-transition-new(root) { animation: routeFadeIn .42s cubic-bezier(.2,.75,.25,1) both; }
+@keyframes routeFadeOut { to { opacity:0; transform:translateY(-5px); } }
+@keyframes routeFadeIn { from { opacity:0; transform:translateY(10px); filter:blur(3px); } to { opacity:1; transform:none; filter:none; } }
+main { animation: pageArrival .68s cubic-bezier(.2,.75,.25,1) both; }
+@keyframes pageArrival { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+.reveal-on-scroll { opacity:0; transform:translateY(22px) scale(.99); filter:blur(2px); transition:opacity .65s ease,transform .72s cubic-bezier(.2,.75,.25,1),filter .7s ease; transition-delay:var(--reveal-delay,0ms); }
+.reveal-on-scroll.is-visible { opacity:1; transform:none; filter:none; }
+#svc .card { display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center; }
+#svc .ico { width:58px; height:58px; margin:0 auto 4px; }
+#svc .ico svg { width:30px; height:30px; }
+#svc h3,#svc p { max-width:34ch; margin-inline:auto; }
+.logo img,.flogo { transform-origin:center; transition:transform .55s cubic-bezier(.2,.75,.25,1),filter .55s ease; filter:drop-shadow(0 0 15px rgba(46,230,197,.2)); animation:logoBreath 6s ease-in-out infinite; }
+.logo:hover img,.footer-brand:hover .flogo { transform:translateY(-2px) scale(1.035); filter:drop-shadow(0 0 24px rgba(46,230,197,.48)); }
+@keyframes logoBreath { 0%,100% { filter:drop-shadow(0 0 12px rgba(46,230,197,.17)); } 50% { filter:drop-shadow(0 0 21px rgba(34,184,236,.34)); } }
+nav a { position:relative; }
+nav a:not(.on)::after { content:""; position:absolute; inset:auto 22% 3px; height:1px; background:linear-gradient(90deg,var(--teal),var(--sky)); transform:scaleX(0); transform-origin:center; transition:transform .32s ease; }
+nav a:not(.on):hover::after,nav a:not(.on):focus-visible::after { transform:scaleX(1); }
+.product-showcase { animation:showcaseArrival .75s cubic-bezier(.2,.75,.25,1) both; }
+@keyframes showcaseArrival { from { opacity:0; transform:translateY(18px) scale(.992); } to { opacity:1; transform:none; } }
+@media(prefers-reduced-motion:reduce) {
+  ::view-transition-old(root),::view-transition-new(root),main,.reveal-on-scroll,.logo img,.flogo,.product-showcase { animation:none !important; transition:none !important; }
+  .reveal-on-scroll { opacity:1; transform:none; filter:none; }
+}
+

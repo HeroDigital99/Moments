@@ -1,0 +1,8 @@
+/* ===== Centering everywhere + detail icons above text ===== */
+body, body *:not(video):not(input):not(textarea) { text-align:center !important; }
+#all .product-card h3, .sector-copy, .sector-copy *, .sector-card, .footer-links a, .footer-bottom { text-align:center !important; }
+.sector-copy { justify-items:center; }
+.detail-point { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-align:center; }
+.detail-point .mini-ico { margin-inline:auto; flex:0 0 auto; width:38px; height:38px; border-radius:12px; }
+.detail-point .mini-ico svg { width:21px; height:21px; }
+

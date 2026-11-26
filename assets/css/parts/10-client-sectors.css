@@ -1,0 +1,29 @@
+/* Every client sector: full-width images in a vertical sequence, original aspect ratio preserved */
+#sector-gallery { width:100%; }
+#sector-gallery .gallery-group { width:100%; padding:clamp(16px,3vw,42px); }
+#sector-gallery .photo-grid { display:flex; flex-direction:column; align-items:center; gap:clamp(28px,5vw,64px); width:100%; }
+#sector-gallery .photo-tile { width:100%; max-width:1460px; min-height:0; height:auto; border-radius:26px; padding:clamp(8px,1.5vw,18px); cursor:zoom-in; }
+#sector-gallery .photo-image { display:block; width:100%; height:auto; aspect-ratio:auto; min-height:0; padding:0; overflow:visible; background:transparent; }
+#sector-gallery .photo-image img { display:block; width:100%; height:auto; max-height:none; object-fit:contain; border-radius:16px; }
+#sector-gallery .tile-caption { min-height:48px; }
+#sector-gallery .gallery-heading { margin-bottom:clamp(20px,3vw,42px); }
+
+@media(max-width:720px) {
+  main { padding-inline:16px; }
+  header .bar { width:100%; }
+  .review-carousel { padding:16px 12px; }
+  .review-carousel .gallery-heading { justify-content:center; }
+  .review-track .photo-tile { flex-basis:min(84vw,520px); width:min(84vw,520px); }
+  .review-arrow { width:42px; height:42px; }
+  #sector-gallery .gallery-group { padding:14px; }
+  #sector-gallery .photo-grid { gap:28px; }
+  #sector-gallery .photo-tile { padding:8px; border-radius:18px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .review-track { scroll-behavior:auto; }
+  .review-carousel-progress span { animation:none !important; }
+  .review-arrow,.g,.card,.btn,nav a,.photo-tile,.sector-card,.product-card,.detail-point,.gallery-group { transition:none !important; }
+  .g:hover,.card:hover,.photo-tile:hover,.sector-card:hover,.product-card:hover,.detail-point:hover,.review-arrow:hover { transform:none; }
+}
+
+

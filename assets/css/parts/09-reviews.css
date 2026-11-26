@@ -1,0 +1,31 @@
+/* Opinions: swipeable horizontal carousel; source images stay uncropped and keep their ratio */
+.review-section { width:100%; }
+.review-carousel { overflow:visible; padding:clamp(18px,3vw,38px); }
+.review-carousel .gallery-heading { justify-content:space-between; gap:18px; flex-wrap:wrap; }
+.review-carousel .gallery-heading > div { flex:1 1 320px; }
+.review-carousel-controls { display:flex; align-items:center; justify-content:center; gap:10px; }
+.review-arrow {
+  display:grid; place-items:center; width:48px; height:48px; border:1px solid rgba(255,255,255,.24); border-radius:50%;
+  color:var(--ink); font-family:inherit; font-size:28px; font-weight:500; line-height:1; background:linear-gradient(145deg,rgba(255,255,255,.17),rgba(255,255,255,.045));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 9px 24px rgba(0,0,0,.2); cursor:pointer;
+  backdrop-filter:blur(16px); transition:transform .25s ease,background .25s ease,box-shadow .25s ease;
+}
+.review-arrow:hover { transform:translateY(-3px) scale(1.06); background:rgba(46,230,197,.22); box-shadow:0 12px 30px rgba(46,230,197,.18); }
+.review-arrow:focus-visible { outline:2px solid var(--teal); outline-offset:3px; }
+.review-track {
+  display:flex !important; flex-flow:row nowrap; align-items:stretch; gap:clamp(14px,2vw,26px); width:100%;
+  overflow-x:auto; overflow-y:hidden; padding:18px 6px 28px; direction:ltr; scrollbar-width:thin;
+  scrollbar-color:rgba(46,230,197,.65) rgba(255,255,255,.08); overscroll-behavior-inline:contain;
+  scroll-snap-type:x mandatory; scroll-behavior:smooth; -webkit-overflow-scrolling:touch;
+}
+.review-track .photo-tile {
+  direction:rtl; flex:0 0 clamp(300px,39vw,540px); width:clamp(300px,39vw,540px); max-width:540px; min-height:0; height:auto;
+  align-self:stretch; scroll-snap-align:center; border-radius:24px; cursor:zoom-in;
+}
+.review-track .photo-image { display:block; width:100%; height:auto; min-height:0; aspect-ratio:auto; padding:0; background:rgba(3,13,28,.45); }
+.review-track .photo-image img { display:block; width:100%; height:auto; max-height:none; object-fit:contain; border-radius:18px 18px 0 0; }
+.review-track .tile-caption { min-height:52px; }
+.review-carousel-progress { height:3px; overflow:hidden; border-radius:999px; background:rgba(255,255,255,.12); }
+.review-carousel-progress span { display:block; width:0; height:100%; border-radius:inherit; background:linear-gradient(90deg,var(--teal),var(--sky)); box-shadow:0 0 12px rgba(46,230,197,.65); }
+@keyframes reviewProgress { from{width:0} to{width:100%} }
+

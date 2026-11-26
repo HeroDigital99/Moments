@@ -1,0 +1,22 @@
+/* ===== Flowing colour inside letters (JS adds .fx; .fx-on only while on screen) ===== */
+.fx { --fx-dur:12s; --fx-dir:normal; --fx-delay:0s;
+  background-image:linear-gradient(100deg,var(--c1),var(--c2),var(--c3),var(--c4),var(--c1));
+  background-size:250% 100%; background-repeat:repeat-x; background-position:0 50%;
+  -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+.fx.fx-on { animation:fxFlow var(--fx-dur) linear var(--fx-delay) infinite var(--fx-dir); }
+.fx:hover.fx-on { animation-duration:calc(var(--fx-dur) / 3); }
+@keyframes fxFlow { to { background-position:250% 50%; } }
+/* four rotating palettes, all inside the brand teal / sky / white range */
+.fx-a { --c1:#eaf6ff; --c2:#2ee6c5; --c3:#22b8ec; --c4:#bff6ff; }
+.fx-b { --c1:#22b8ec; --c2:#eaf6ff; --c3:#7dffe9; --c4:#4fc3f7; }
+.fx-c { --c1:#ffffff; --c2:#5fe7d3; --c3:#8fd6ff; --c4:#d9fbf4; }
+.fx-d { --c1:#7dffe9; --c2:#4fc3f7; --c3:#2ee6c5; --c4:#eaf6ff; }
+/* body copy: calmer + lighter so it stays readable */
+.fx-soft.fx-a { --c1:#cfe3f5; --c2:#e9fffb; --c3:#9fe9dc; --c4:#d6efff; }
+.fx-soft.fx-b { --c1:#9fe9dc; --c2:#e6f3ff; --c3:#b4dcf5; --c4:#e9fffb; }
+.fx-soft.fx-c { --c1:#e6f3ff; --c2:#a6ecdf; --c3:#cfe3f5; --c4:#bfeaff; }
+.fx-soft.fx-d { --c1:#b4dcf5; --c2:#e9fffb; --c3:#9fe9dc; --c4:#e6f3ff; }
+/* dark text sitting on the bright teal gradient (primary button, hero screen) */
+.fx-dark { --c1:#04202e; --c2:#0b4a6e; --c3:#06384f; --c4:#0a5a5a; }
+@media(prefers-reduced-motion:reduce){ .fx.fx-on { animation:none; } }
+

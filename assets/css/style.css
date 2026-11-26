@@ -1,0 +1,17 @@
+/* Moments Screens - stylesheet entry point.
+   Parts load in this exact order (later parts override earlier ones). Edit the part files in ./parts */
+@import url("parts/01-base.css?v=s1");
+@import url("parts/02-media-viewer.css?v=s1");
+@import url("parts/03-catalogue-cards.css?v=s1");
+@import url("parts/04-glass-polish.css?v=s1");
+@import url("parts/05-footer.css?v=s1");
+@import url("parts/06-product-gallery.css?v=s1");
+@import url("parts/07-catalogue-list.css?v=s1");
+@import url("parts/08-layout-glass.css?v=s1");
+@import url("parts/09-reviews.css?v=s1");
+@import url("parts/10-client-sectors.css?v=s1");
+@import url("parts/11-product-sliders.css?v=s1");
+@import url("parts/12-motion.css?v=s1");
+@import url("parts/13-centering-detail-icons.css?v=s1");
+@import url("parts/14-text-effects.css?v=s1");
+@import url("parts/15-whatsapp-button.css?v=s1");
